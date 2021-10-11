@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCCAA" representedClassName="CDCCAA" syncable="YES" codeGenerationType="class">
+        <attribute name="ccaaName" attributeType="String"/>
+        <attribute name="idCCAA" attributeType="String"/>
+        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDProvince" inverseName="belongs" inverseEntity="CDProvince"/>
+    </entity>
+    <entity name="CDProvince" representedClassName="CDProvince" syncable="YES" codeGenerationType="class">
+        <attribute name="idProvince" attributeType="String"/>
+        <attribute name="provinceName" attributeType="String"/>
+        <relationship name="belongs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCCAA" inverseName="contains" inverseEntity="CDCCAA"/>
+    </entity>
+    <elements>
+        <element name="CDCCAA" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="CDProvince" positionX="-54" positionY="9" width="128" height="74"/>
+    </elements>
+</model>
